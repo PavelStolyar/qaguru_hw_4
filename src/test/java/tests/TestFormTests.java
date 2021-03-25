@@ -3,15 +3,16 @@ package tests;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import pageObjects.TestFormPage;
+import pages.TestFormPage;
 
-public class FormTestWithPageObject {
+public class TestFormTests {
 
     TestFormPage testFormPage = new TestFormPage();
 
     @BeforeAll
     static void setup() {
         Configuration.startMaximized = true;
+        Configuration.baseUrl="https://demoqa.com";
     }
 
     @Test
